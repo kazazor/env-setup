@@ -14,7 +14,7 @@ cd ./Developments
 ```
 * Clone the repository:
 ```shell
-git clone <repository clone URL>
+git clone https://github.com/kazazor/env-setup
 ```
 
 ## Homebrew
