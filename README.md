@@ -47,18 +47,6 @@ sudo npm i -g yo
 ```
 
 ## Git settings + auto complete
-### Configuration
-1. Change your global git configuration:
-```shell
-git config --global user.name “<my full name>”
-git config --global user.email “<my email>”
-```
-* Update the ```push.default``` behavior on your machine:
-```shell
-git config --global push.default nothing
-```
-(What does this configuration do? Basically it forces you to specify on which branch you would like to push the code, so you won't accidentally push the code to master or any other branch. This settings is being done in order to avoid mistakes for those of us working with git from the command line. It will not effect SourceTree or alike tools.. For more info go [here](http://stackoverflow.com/questions/8170558/git-push-set-target-for-branch )).
-
 ### Aliases + Auto complete
 1. Edit the ~/.bash_profile file
 * Add the following rows
@@ -72,6 +60,22 @@ source ~/Developments/env-setup/git/alias
 ```shell
 source ~/.bash_profile
 ```
+4. Create a symlink to the .gitconfig file:
+```shell
+ln -s ~/Developments/env-setup/git/.gitconfig ~/.gitconfig
+```
+
+### Configuration
+1. Change your global git configuration:
+```shell
+git config --global user.name “<my full name>”
+git config --global user.email “<my email>”
+```
+* Update the ```push.default``` behavior on your machine:
+```shell
+git config --global push.default nothing
+```
+(What does this configuration do? Basically it forces you to specify on which branch you would like to push the code, so you won't accidentally push the code to master or any other branch. This settings is being done in order to avoid mistakes for those of us working with git from the command line. It will not effect SourceTree or alike tools.. For more info go [here](http://stackoverflow.com/questions/8170558/git-push-set-target-for-branch )).
 
 ## Atom editor
 1. Download [Atom](https://atom.io/)
