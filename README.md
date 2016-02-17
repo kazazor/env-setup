@@ -21,7 +21,7 @@ git clone https://github.com/kazazor/env-setup
 1. Go to [this](http://brew.sh/) link and install the package manager for OSX.
 * Lets add more formulas to our brew installer:
 ```shell
-brew tap hombrew/versions
+brew tap homebrew/versions
 ```
 * Now lets update homebrew with all the newest formulas:
 ```shell
