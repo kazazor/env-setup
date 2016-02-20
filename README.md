@@ -45,6 +45,23 @@ brew install homebrew/versions/node4-lts
 sudo npm i -g gulp
 sudo npm i -g yo
 ```
+## Atom editor
+1. Download [Atom](https://atom.io/)
+* Install the **Atom Shell Commands** from the settings.
+* Change the **Preferred line length** to 120.
+* Change the **Tab Length** to 2.
+* Install the following packages from the package manager:
+```Shell
+apm install autoprefixer
+apm install docblockr
+apm install linter
+apm install linter-csslint
+apm install trailing-spaces
+```
+* Install packages that could only be installed from the Atom interface:
+  * https://atom.io/packages/emmet
+  * https://atom.io/packages/javascript-snippets
+  * https://atom.io/packages/todo-show
 
 ## Git settings + auto complete
 ### Aliases + Auto complete
@@ -68,32 +85,15 @@ ln -s ~/Developments/env-setup/git/.gitconfig ~/.gitconfig
 ### Configuration
 1. Change your global git configuration:
 ```shell
-git config --global user.name “<my full name>”
-git config --global user.email “<my email>”
+git config --global user.name "<my full name>"
+git config --global user.email "<my email>"
+git config --global core.editor "atom"
 ```
 * Update the ```push.default``` behavior on your machine:
 ```shell
 git config --global push.default nothing
 ```
 (What does this configuration do? Basically it forces you to specify on which branch you would like to push the code, so you won't accidentally push the code to master or any other branch. This settings is being done in order to avoid mistakes for those of us working with git from the command line. It will not effect SourceTree or alike tools.. For more info go [here](http://stackoverflow.com/questions/8170558/git-push-set-target-for-branch )).
-
-## Atom editor
-1. Download [Atom](https://atom.io/)
-* Install the **Atom Shell Commands** from the settings.
-* Change the **Preferred line length** to 120.
-* Change the **Tab Length** to 2.
-* Install the following packages from the package manager:
-```Shell
-apm install autoprefixer
-apm install docblockr
-apm install linter
-apm install linter-csslint
-apm install trailing-spaces
-```
-* Install packages that could only be installed from the Atom interface:
-  * https://atom.io/packages/emmet
-  * https://atom.io/packages/javascript-snippets
-  * https://atom.io/packages/todo-show
 
 ## Useful apps
 ### App Store
