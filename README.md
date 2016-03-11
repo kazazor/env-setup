@@ -97,7 +97,7 @@ git config --global push.default nothing
 
 ## Useful apps
 ### App Store
-1. Fly cut
+1. FlyCut
 * Go2Shell
 
 ### Outsiders
