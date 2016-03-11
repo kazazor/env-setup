@@ -98,8 +98,8 @@ git config --global push.default nothing
 ## Useful apps
 ### App Store
 1. FlyCut
-* Go2Shell
 
 ### Outsiders
-1. App Cleaner - https://freemacsoft.net/appcleaner/
-* Spectacle - https://www.spectacleapp.com/
+1. [App Cleaner](https://freemacsoft.net/appcleaner/)
+* [Spectacle](https://www.spectacleapp.com/)
+* [Go2Shell](http://zipzapmac.com/go2shell)
