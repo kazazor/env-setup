@@ -55,6 +55,11 @@ Then, install the node version you would like to have using:
 nvm install <version>
 ```
 
+In order to use the new version instead of your system version you could run ```nvm list``` to see all the versions you've installed, and then use the specific version:
+```shell
+nvm use <version>
+```
+
 ## Atom editor
 1. Download [Atom](https://atom.io/)
 * Install the **Atom Shell Commands** from the settings.
