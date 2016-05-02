@@ -42,9 +42,19 @@ brew install homebrew/versions/node4-lts
 
 ### Global packages
 ```shell
-sudo npm i -g gulp
-sudo npm i -g yo
+npm i -g gulp
+npm i -g yo
+npm i -g bower
 ```
+
+### NVM
+Install ```nvm``` using the instructions [here](https://github.com/creationix/nvm).
+
+Then, install the node version you would like to have using:
+```shell
+nvm install <version>
+```
+
 ## Atom editor
 1. Download [Atom](https://atom.io/)
 * Install the **Atom Shell Commands** from the settings.
