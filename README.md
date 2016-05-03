@@ -60,6 +60,18 @@ In order to use the new version instead of your system version you could run ```
 nvm use <version>
 ```
 
+In order to activate NVM for all the terminal windows you'll open in the future you'll need to add to the ```~/.bash_profile``` file the following section:
+```shell
+# NVM
+export NVM_DIR="<path to your .nvm folder>/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+```
+
+In order to load it for all he existing terminals, you'll need to run this command:
+```shell
+source ~/.bash_profile
+```
+
 ## Atom editor
 1. Download [Atom](https://atom.io/)
 * Install the **Atom Shell Commands** from the settings.
@@ -80,19 +92,19 @@ apm install trailing-spaces
 
 ## Git settings + auto complete
 ### Aliases + Auto complete
-1. Edit the ~/.bash_profile file
-* Add the following rows
+1 - Edit the ```~/.bash_profile``` file<br>
+2 - Add the following rows
 ```shell
 # Git
 source ~/Developments/env-setup/bash/env
 source ~/Developments/env-setup/bash/git
 source ~/Developments/env-setup/git/alias
 ```
-* Load the aliases in the open terminal (for new terminals it will be set already):
+3 - Load the aliases in the open terminal (for new terminals it will be set already):
 ```shell
 source ~/.bash_profile
 ```
-4. Create a symlink to the .gitconfig file:
+4 - Create a symlink to the .gitconfig file:
 ```shell
 ln -s ~/Developments/env-setup/git/.gitconfig ~/.gitconfig
 ```
