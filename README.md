@@ -60,14 +60,21 @@ In order to use the new version instead of your system version you could run ```
 nvm use <version>
 ```
 
-In order to activate NVM for all the terminal windows you'll open in the future you'll need to add to the ```~/.bash_profile``` file the following section:
+<a name="nvm_bash_profile"></a>In order to activate NVM for all the terminal windows you'll open in the future you'll need to add to the ```~/.bash_profile``` file the following section:
 ```shell
 # NVM
-export NVM_DIR="<path to your .nvm folder>/.nvm"
+# Start nvm in the new session
+export NVM_DIR="/Users/orkazaz/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Showing what version of node is being used
+export NVM_NODE_CURRENT=$(nvm current);
+echo "#################################"
+echo "Using Node version: $NVM_NODE_CURRENT";
+echo "#################################"
 ```
 
-In order to load it for all he existing terminals, you'll need to run this command:
+In order to load it for all the existing terminals, you'll need to run this command:
 ```shell
 source ~/.bash_profile
 ```
@@ -130,3 +137,17 @@ git config --global push.default nothing
 1. [App Cleaner](https://freemacsoft.net/appcleaner/)
 * [Spectacle](https://www.spectacleapp.com/)
 * [Go2Shell](http://zipzapmac.com/go2shell)
+
+## Troubleshooting
+### NVM
+When opening a new terminal window (after performing [this step](#nvm_bash_profile)), you might get this error:
+```shell
+N/A version x.x.x is not installed yet
+```
+
+Why is this hapening?<br>
+You might have an alias for a node version you uninstalled / doesn't exists. Like described in thie [github issue](https://github.com/creationix/nvm/issues/437#issuecomment-46477874).<br>
+In order to fix that, just change the alias to point to a new node version you do have install. For example:
+```
+nvm alias default 4.4.4
+```
