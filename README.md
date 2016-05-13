@@ -140,7 +140,7 @@ git config --global push.default nothing
 
 ## Troubleshooting
 ### NVM
-When opening a new terminal window (after performing [this step](nvm_bash_profile)), you might get this error:
+When opening a new terminal window (after performing [this step](#nvm_bash_profile)), you might get this error:
 ```shell
 N/A version x.x.x is not installed yet
 ```
