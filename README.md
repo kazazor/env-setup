@@ -45,6 +45,7 @@ brew install homebrew/versions/node4-lts
 npm i -g gulp
 npm i -g yo
 npm i -g bower
+npm i -g ntl
 ```
 
 ### NVM
