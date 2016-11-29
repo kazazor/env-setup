@@ -28,12 +28,7 @@ brew tap homebrew/versions
 brew update
 brew doctor
 ```
-* Install [launchrocket](https://github.com/jimbojsb/launchrocket) to manage homebrew services:
-```shell
-brew cask install launchrocket
-```
-You should see it in the system preferences:
-<img width="662" alt="screen shot 2016-06-17 at 3 41 41 pm" src="https://cloud.githubusercontent.com/assets/1577655/16150800/1a577898-34a2-11e6-88a0-02b76def1154.png">
+
 ## Node.js
 ###  Installation
 1. Using ```brew``` we'll search for the latest stable (LTS) version of node.js:
@@ -47,9 +42,6 @@ brew install homebrew/versions/node4-lts
 
 ### Global packages
 ```shell
-npm i -g gulp
-npm i -g yo
-npm i -g bower
 npm i -g ntl
 ```
 
