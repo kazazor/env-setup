@@ -117,6 +117,11 @@ Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Easi
 
 Then [install Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/#before-you-begin) for local development using Kubernetes.
 
+Part of the `Minikube` installation requirements is `VirtualBox`. You can install it via brew like this:
+```shell
+brew cask install virtualbox
+```
+
 ## Useful apps
 ### App Store
 1. FlyCut
