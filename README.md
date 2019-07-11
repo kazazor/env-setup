@@ -31,9 +31,9 @@ brew doctor
 ```shell
 brew search node
 ```
-* And then install it (at the time of writing the LTS version is 4.3.0):
+2. And then install it (at the time of writing the LTS version is 10.16.0):
 ```shell
-brew install homebrew/versions/node4-lts
+brew install node@10
 ```
 
 ### Global packages
@@ -73,24 +73,6 @@ In order to load it for all the existing terminals, you'll need to run this comm
 source ~/.bash_profile
 ```
 
-## Atom editor
-1. Download [Atom](https://atom.io/)
-* Install the **Atom Shell Commands** from the settings.
-* Change the **Preferred line length** to 120.
-* Change the **Tab Length** to 2.
-* Install the following packages from the package manager:
-```Shell
-apm install autoprefixer
-apm install docblockr
-apm install linter
-apm install linter-csslint
-apm install trailing-spaces
-```
-* Install packages that could only be installed from the Atom interface:
-  * https://atom.io/packages/emmet
-  * https://atom.io/packages/javascript-snippets
-  * https://atom.io/packages/todo-show
-
 ## Git settings + auto complete
 ### Aliases + Auto complete
 1 - Edit the ```~/.bash_profile``` file<br>
@@ -123,6 +105,18 @@ git config --global push.default nothing
 ```
 (What does this configuration do? Basically it forces you to specify on which branch you would like to push the code, so you won't accidentally push the code to master or any other branch. This settings is being done in order to avoid mistakes for those of us working with git from the command line. It will not effect SourceTree or alike tools.. For more info go [here](http://stackoverflow.com/questions/8170558/git-push-set-target-for-branch )).
 
+## Docker and Kubernetes
+
+### Docker
+
+Install [Docker for Mac](https://docs.docker.com/docker-for-mac/install/).
+
+### Kubernetes
+
+Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Easiest way would be using [brew](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-homebrew-on-macos).
+
+Then [install Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/#before-you-begin) for local development using Kubernetes.
+
 ## Useful apps
 ### App Store
 1. FlyCut
@@ -130,7 +124,6 @@ git config --global push.default nothing
 ### Outsiders
 1. [App Cleaner](https://freemacsoft.net/appcleaner/)
 * [Spectacle](https://www.spectacleapp.com/)
-* [Go2Shell](http://zipzapmac.com/go2shell)
 
 ## Troubleshooting
 ### NVM
