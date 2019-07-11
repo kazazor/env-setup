@@ -122,6 +122,17 @@ Part of the `Minikube` installation requirements is `VirtualBox`. You can instal
 brew cask install virtualbox
 ```
 
+You'll probably get an error that you need to approve the installation to run. Just follow the instructions (when you add `--force --verbose --debug` to see the problem):
+```
+To install and/or use virtualbox you may need to enable their kernel extension in
+
+  System Preferences → Security & Privacy → General
+
+For more information refer to vendor documentation or the Apple Technical Note:
+
+  https://developer.apple.com/library/content/technotes/tn2459/_index.html
+```
+
 ## Useful apps
 ### App Store
 1. FlyCut
