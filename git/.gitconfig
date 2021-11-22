@@ -14,7 +14,7 @@
 	new = green bold
 [core]
 	excludesfile = /Users/orkazaz/.gitignore_global
-  editor = atom
+	editor = code --wait
 [diff]
     tool = Kaleidoscope
 [difftool "Kaleidoscope"]

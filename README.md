@@ -89,6 +89,19 @@ Add this to your `~/.zshenv` file
 export PATH=~/.yarn/bin:$PATH
 ```
 
+## VSCode
+
+Install [VSCode](https://code.visualstudio.com/)
+
+## VSCode extensions
+
+1. [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+2. [Mocha Test Explorer](https://marketplace.visualstudio.com/items?itemName=hbenl.vscode-mocha-test-adapter)
+3. [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+4. [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+5. [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
+6. VSCode commander - to make VS Code the default git editor: Run command + shift + P then write "Shell" and choose "Install 'code' command in PATH"
+
 ## Git settings + auto complete
 
 ### Install oh my zash + git aliases
@@ -145,7 +158,7 @@ plugins=(git docker zsh-syntax-highlighting zsh-autosuggestions)
 ```shell
 git config --global user.name "<my full name>"
 git config --global user.email "<my email>"
-git config --global core.editor "atom"
+git config --global core.editor "code --wait"
 ```
 
 - Update the `push.default` behavior on your machine:
@@ -197,18 +210,6 @@ For more information refer to vendor documentation or the Apple Technical Note:
 1. [App Cleaner](https://freemacsoft.net/appcleaner/)
 
 - [Spectacle](https://www.spectacleapp.com/)
-
-## VSCode
-
-Install [VSCode](https://code.visualstudio.com/)
-
-### VSCode extensions
-
-1. [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
-2. [Mocha Test Explorer](https://marketplace.visualstudio.com/items?itemName=hbenl.vscode-mocha-test-adapter)
-3. [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-4. [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-5. [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
 
 ## Troubleshooting
 
