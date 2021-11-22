@@ -26,16 +26,6 @@ brew doctor
 ```
 
 ## Node.js
-###  Installation
-1. Using ```brew``` we'll search for the latest stable (LTS) version of node.js:
-```shell
-brew search node
-```
-2. And then install it (at the time of writing the LTS version is 10.16.0):
-```shell
-brew install node@10
-```
-
 ### NVM
 Install ```nvm``` using the instructions [here](https://github.com/creationix/nvm).
 
@@ -69,24 +59,28 @@ source ~/.zshenv
 ```
 
 ## Git settings + auto complete
-### Aliases + Auto complete
-1 - Edit the ```~/.zshenv``` file<br>
-2 - Add the following rows
+
+### Install oh my zash + git aliases
+Run
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+Then add this line to your ```~/.zshenv``` file<br>
 ```shell
 # Git
-source ~/Developments/env-setup/bash/env
-source ~/Developments/env-setup/bash/git
 source ~/Developments/env-setup/git/alias
+
+# Oh my zsh
+source ~/.zshrc
 ```
-3 - Install git auto complete
-```shell
-brew install bash-completion
-```
-4 - Load the aliases in the open terminal (for new terminals it will be set already):
+
+Load the aliases in the open terminal (for new terminals it will be set already):
 ```shell
 source ~/.zshenv
 ```
-5 - Create a symlink to the .gitconfig file:
+
+Create a symlink to the .gitconfig file:
 ```shell
 ln -s ~/Developments/env-setup/git/.gitconfig ~/.gitconfig
 ```
