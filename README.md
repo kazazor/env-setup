@@ -64,6 +64,12 @@ Install yarn
 npm install --global yarn
 ```
 
+Add this to your ```~/.zshenv``` file
+```shell
+# Yarn
+export PATH=~/.yarn/bin:$PATH
+```
+
 ## Git settings + auto complete
 
 ### Install oh my zash + git aliases
