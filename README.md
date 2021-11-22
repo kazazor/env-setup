@@ -85,6 +85,19 @@ Create a symlink to the .gitconfig file:
 ln -s ~/Developments/env-setup/git/.gitconfig ~/.gitconfig
 ```
 
+### Install oh my zsh plugins
+Clone the Git repositories.
+```shell
+git clone https://github.com/zsh-users/zsh-docker.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-docker
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+Run the command `open ~/.oh-my-zshand` navigate to `.oh-my-zsh > custom > plugins` directory to view the cloned directory.
+Then, add the plugin to the plugin section of the `~/.zshrc` config file:
+```shell
+plugins=(git docker zsh-syntax-highlighting zsh-autosuggestions)
+```
+
 ### Configuration
 1. Change your global git configuration:
 ```shell
