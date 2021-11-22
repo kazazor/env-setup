@@ -36,11 +36,6 @@ brew search node
 brew install node@10
 ```
 
-### Global packages
-```shell
-npm i -g ntl
-```
-
 ### NVM
 Install ```nvm``` using the instructions [here](https://github.com/creationix/nvm).
 
@@ -54,7 +49,7 @@ In order to use the new version instead of your system version you could run ```
 nvm use <version>
 ```
 
-<a name="nvm_bash_profile"></a>In order to activate NVM for all the terminal windows you'll open in the future you'll need to add to the ```~/.bash_profile``` file the following section:
+<a name="nvm_zshenv"></a>In order to activate NVM for all the terminal windows you'll open in the future you'll need to add to the ```~/.zshenv``` file the following section:
 ```shell
 # NVM
 # Start nvm in the new session
@@ -70,12 +65,12 @@ echo "#################################"
 
 In order to load it for all the existing terminals, you'll need to run this command:
 ```shell
-source ~/.bash_profile
+source ~/.zshenv
 ```
 
 ## Git settings + auto complete
 ### Aliases + Auto complete
-1 - Edit the ```~/.bash_profile``` file<br>
+1 - Edit the ```~/.zshenv``` file<br>
 2 - Add the following rows
 ```shell
 # Git
@@ -83,11 +78,15 @@ source ~/Developments/env-setup/bash/env
 source ~/Developments/env-setup/bash/git
 source ~/Developments/env-setup/git/alias
 ```
-3 - Load the aliases in the open terminal (for new terminals it will be set already):
+3 - Install git auto complete
 ```shell
-source ~/.bash_profile
+brew install bash-completion
 ```
-4 - Create a symlink to the .gitconfig file:
+4 - Load the aliases in the open terminal (for new terminals it will be set already):
+```shell
+source ~/.zshenv
+```
+5 - Create a symlink to the .gitconfig file:
 ```shell
 ln -s ~/Developments/env-setup/git/.gitconfig ~/.gitconfig
 ```
@@ -143,7 +142,7 @@ For more information refer to vendor documentation or the Apple Technical Note:
 
 ## Troubleshooting
 ### NVM
-When opening a new terminal window (after performing [this step](#nvm_bash_profile)), you might get this error:
+When opening a new terminal window (after performing [this step](#nvm_zshenv)), you might get this error:
 ```shell
 N/A version x.x.x is not installed yet
 ```
