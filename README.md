@@ -58,6 +58,12 @@ In order to load it for all the existing terminals, you'll need to run this comm
 source ~/.zshenv
 ```
 
+### Yarn
+Install yarn
+```shell
+npm install --global yarn
+```
+
 ## Git settings + auto complete
 
 ### Install oh my zash + git aliases
