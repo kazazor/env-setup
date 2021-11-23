@@ -1,6 +1,11 @@
-# OSX environment setup
+# macOS environment setup
 
-The purpose of this repository is to describe an installation of a new OSX environment with all the needed "goodies" for a kick ass environment.
+The purpose of this repository is to describe an installation of a new macOS environment with all the needed "goodies" for a kick ass environment.
+
+## macOS Version
+These settings were tested on:
+* macOS Big Sur
+* Version 11.6
 
 ## XCode
 
@@ -26,7 +31,7 @@ git clone https://github.com/kazazor/env-setup
 
 ## Homebrew
 
-1. Go to [this](http://brew.sh/) link and install the package manager for OSX.
+1. Go to [this](http://brew.sh/) link and install the package manager for macOS.
 
 - Now lets update homebrew with all the newest formulas:
 
