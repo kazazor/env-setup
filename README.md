@@ -106,10 +106,18 @@ Install [VSCode](https://code.visualstudio.com/)
 
 ### Install oh my zash + git aliases
 
+#### Oh My Zsh
+
 Run
 
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+#### Oh my zsh terminal promopt settings
+In the second row, replace `%c` with `%~` in this file:
+```shell
+sudo vi ~/.oh-my-zsh/themes/robbyrussell.zsh-theme
 ```
 
 Then add this line to your `~/.zshenv` file<br>
@@ -122,16 +130,16 @@ source ~/Developments/env-setup/git/alias
 source ~/.zshrc
 ```
 
-Load the aliases in the open terminal (for new terminals it will be set already):
-
-```shell
-source ~/.zshenv
-```
-
 Create a symlink to the .gitconfig file:
 
 ```shell
 ln -s ~/Developments/env-setup/git/.gitconfig ~/.gitconfig
+```
+
+Load the aliases in the open terminal (for new terminals it will be set already):
+
+```shell
+source ~/.zshenv
 ```
 
 ### Install oh my zsh plugins
