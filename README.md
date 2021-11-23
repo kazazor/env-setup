@@ -35,6 +35,81 @@ brew update
 brew doctor
 ```
 
+## Git settings + Oh my zsh + auto complete
+
+### Install oh my zash + git aliases
+
+#### Oh My Zsh
+
+Run
+
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+#### Oh my zsh terminal promopt settings
+In the second row, replace `%c` with `%~` in this file:
+```shell
+sudo vi ~/.oh-my-zsh/themes/robbyrussell.zsh-theme
+```
+
+Then add this line to your `~/.zshenv` file. Pay attention - loading of the oh my zsh rc file MUST come first!!<br>
+
+```shell
+# Oh my zsh
+source ~/.zshrc
+
+# Git
+source ~/Developments/env-setup/git/alias
+```
+
+Create a symlink to the .gitconfig file:
+
+```shell
+ln -s ~/Developments/env-setup/git/.gitconfig ~/.gitconfig
+```
+
+Load the aliases in the open terminal (for new terminals it will be set already):
+
+```shell
+source ~/.zshenv
+```
+
+### Install oh my zsh plugins
+
+Clone the Git repositories.
+
+```shell
+git clone https://github.com/zsh-users/zsh-docker.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-docker
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+Run the command `open ~/.oh-my-zshand` navigate to `.oh-my-zsh > custom > plugins` directory to view the cloned directory.
+Then, add the plugin to the plugin section of the `~/.zshrc` config file:
+
+```shell
+plugins=(git docker zsh-syntax-highlighting zsh-autosuggestions)
+```
+
+### Configuration
+
+1. Change your global git configuration:
+
+```shell
+git config --global user.name "<my full name>"
+git config --global user.email "<my email>"
+git config --global core.editor "code --wait"
+```
+
+- Update the `push.default` behavior on your machine:
+
+```shell
+git config --global push.default nothing
+```
+
+(What does this configuration do? Basically it forces you to specify on which branch you would like to push the code, so you won't accidentally push the code to master or any other branch. This settings is being done in order to avoid mistakes for those of us working with git from the command line. It will not effect SourceTree or alike tools.. For more info go [here](http://stackoverflow.com/questions/8170558/git-push-set-target-for-branch)).
+
 ## Node.js
 
 ### NVM
@@ -101,81 +176,6 @@ Install [VSCode](https://code.visualstudio.com/)
 4. [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 5. [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
 6. VSCode commander - to make VS Code the default git editor: Run command + shift + P then write "Shell" and choose "Install 'code' command in PATH"
-
-## Git settings + auto complete
-
-### Install oh my zash + git aliases
-
-#### Oh My Zsh
-
-Run
-
-```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
-
-#### Oh my zsh terminal promopt settings
-In the second row, replace `%c` with `%~` in this file:
-```shell
-sudo vi ~/.oh-my-zsh/themes/robbyrussell.zsh-theme
-```
-
-Then add this line to your `~/.zshenv` file<br>
-
-```shell
-# Git
-source ~/Developments/env-setup/git/alias
-
-# Oh my zsh
-source ~/.zshrc
-```
-
-Create a symlink to the .gitconfig file:
-
-```shell
-ln -s ~/Developments/env-setup/git/.gitconfig ~/.gitconfig
-```
-
-Load the aliases in the open terminal (for new terminals it will be set already):
-
-```shell
-source ~/.zshenv
-```
-
-### Install oh my zsh plugins
-
-Clone the Git repositories.
-
-```shell
-git clone https://github.com/zsh-users/zsh-docker.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-docker
-git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
-
-Run the command `open ~/.oh-my-zshand` navigate to `.oh-my-zsh > custom > plugins` directory to view the cloned directory.
-Then, add the plugin to the plugin section of the `~/.zshrc` config file:
-
-```shell
-plugins=(git docker zsh-syntax-highlighting zsh-autosuggestions)
-```
-
-### Configuration
-
-1. Change your global git configuration:
-
-```shell
-git config --global user.name "<my full name>"
-git config --global user.email "<my email>"
-git config --global core.editor "code --wait"
-```
-
-- Update the `push.default` behavior on your machine:
-
-```shell
-git config --global push.default nothing
-```
-
-(What does this configuration do? Basically it forces you to specify on which branch you would like to push the code, so you won't accidentally push the code to master or any other branch. This settings is being done in order to avoid mistakes for those of us working with git from the command line. It will not effect SourceTree or alike tools.. For more info go [here](http://stackoverflow.com/questions/8170558/git-push-set-target-for-branch)).
 
 ## Docker and Kubernetes
 
