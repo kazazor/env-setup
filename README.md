@@ -58,12 +58,8 @@ In the second row, replace `%c` with `%~` in this file:
 sudo vi ~/.oh-my-zsh/themes/robbyrussell.zsh-theme
 ```
 
-Then add this line to your `~/.zshenv` file. Pay attention - loading of the oh my zsh rc file MUST come first!!<br>
-
+Then add these lines to the bottom of your `~/.zshrc` file.<br>
 ```shell
-# Oh my zsh
-source ~/.zshrc
-
 # Git
 source ~/Developments/env-setup/git/alias
 ```
@@ -77,7 +73,7 @@ ln -s ~/Developments/env-setup/git/.gitconfig ~/.gitconfig
 Load the aliases in the open terminal (for new terminals it will be set already):
 
 ```shell
-source ~/.zshenv
+source ~/.zshrc
 ```
 
 ### Install oh my zsh plugins
@@ -133,7 +129,7 @@ In order to use the new version instead of your system version you could run `nv
 nvm use <version>
 ```
 
-<a name="nvm_zshenv"></a>In order to activate NVM for all the terminal windows you'll open in the future you'll need to add to the `~/.zshenv` file the following section:
+<a name="nvm_zshrc"></a>In order to activate NVM for all the terminal windows you'll open in the future you'll need to add to the `~/.zshrc` file the following section:
 
 ```shell
 # NVM
@@ -151,7 +147,7 @@ echo "#################################"
 In order to load it for all the existing terminals, you'll need to run this command:
 
 ```shell
-source ~/.zshenv
+source ~/.zshrc
 ```
 
 ### Yarn
@@ -162,7 +158,7 @@ Install yarn
 npm install --global yarn
 ```
 
-Add this to your `~/.zshenv` file
+Add this to your `~/.zshrc` file
 
 ```shell
 # Yarn
@@ -228,7 +224,7 @@ For more information refer to vendor documentation or the Apple Technical Note:
 
 ### NVM
 
-When opening a new terminal window (after performing [this step](#nvm_zshenv)), you might get this error:
+When opening a new terminal window (after performing [this step](#nvm_zshrc)), you might get this error:
 
 ```shell
 N/A version x.x.x is not installed yet
