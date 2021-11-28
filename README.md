@@ -177,6 +177,7 @@ Install [VSCode](https://code.visualstudio.com/)
 4. [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 5. [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
 6. VSCode commander - to make VS Code the default git editor: Run command + shift + P then write "Shell" and choose "Install 'code' command in PATH"
+7. [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 
 ## Docker and Kubernetes
 
