@@ -179,6 +179,7 @@ Install [VSCode](https://code.visualstudio.com/)
 6. VSCode commander - to make VS Code the default git editor: Run command + shift + P then write "Shell" and choose "Install 'code' command in PATH"
 7. [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - Get hisotry while viewing the file
 8. [Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Solidity support and highlighting
+9. [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
 
 ## Docker and Kubernetes
 
