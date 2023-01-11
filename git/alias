@@ -2,7 +2,7 @@
 alias gs="git status"
 alias gaa='git add -A'
 alias gcm="git commit -m"
-alias gop="git remote update origin --prune"
+alias gbc="git fetch -p && git branch -vv | grep ': gone]'|  grep -v \"\*\" | awk '{ print $1; }' | xargs -r git branch -D"
 alias gl="git log --oneline --graph --all --decorate"
 alias gls="git log --oneline --graph --all --decorate --stat"
 alias ga="git add"
